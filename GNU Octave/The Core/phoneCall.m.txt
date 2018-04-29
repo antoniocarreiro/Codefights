@@ -1,0 +1,25 @@
+function res = phoneCall (min1, min2_10, min11, s)
+
+min1_cnt = 0;
+min2_10_cnt = 0;
+min11_cnt = 0;
+
+if s >= min1
+    s = s - min1;
+    min1_cnt = min1_cnt + 1;
+end
+
+while s >= min2_10 && min2_10_cnt < 9
+    s = s - min2_10;
+    min2_10_cnt = min2_10_cnt + 1;
+end
+
+while s >= min11 && min2_10_cnt == 9
+    s = s - min11;
+    min11_cnt = min11_cnt + 1;
+end
+
+res = min1_cnt + min2_10_cnt + min11_cnt;
+    
+
+endfunction

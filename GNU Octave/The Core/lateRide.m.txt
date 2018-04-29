@@ -1,0 +1,8 @@
+function res = lateRide (n)
+
+hrs =  idivide(n, 60);
+mins = rem(n, 60);
+
+res = sum(strcat(int2str(hrs), int2str(mins)) - 48);
+
+endfunction
